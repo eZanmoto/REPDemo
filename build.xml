@@ -13,15 +13,21 @@
     <property name="api.dir"        value="${doc.dir}/api"/>
 
     <property name="lib.dir"        value="/usr/share/java"/>
+    <property name="inc.dir"        value="lib"/>
 
     <property name="junit.jar"      value="junit4.jar"/>
     <property name="guava.jar"      value="guava-r09.jar"/>
+    <property name="rep.jar"        value="REP.jar"/>
     <property name="production.jar" value="${ant.project.name}.jar"/>
 
     <path id="classpath">
         <fileset dir="${lib.dir}">
             <include name="${junit.jar}"/>
             <include name="${guava.jar}"/>
+            <include name="${rep.jar}"/>
+        </fileset>
+        <fileset dir="${inc.dir}">
+            <include name="${rep.jar}"/>
         </fileset>
     </path>
 
